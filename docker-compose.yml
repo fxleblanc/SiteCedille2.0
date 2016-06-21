@@ -1,0 +1,17 @@
+db_cedille:
+  image: mariadb
+
+
+  environment:
+    MYSQL_ROOT_PASSWORD: 123456
+    MYSQL_DATABASE: cedille_web
+
+web_cedille:
+  build: .
+  command: python3 django/cedille/manage.py runserver 0.0.0.0:8000
+  volumes:
+    - .:/code
+  ports:
+    - "8000:8000"
+  links:
+    - db_cedille
