@@ -8,10 +8,10 @@ install:
   - pip install coveralls
   - pip install pep8
 
-before_script:
+
 
 script:
-
+  - pep8 --count --show-source --exclude=migrations django/cedille
 
 after_success:
   - coveralls
