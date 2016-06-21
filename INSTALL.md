@@ -36,7 +36,7 @@ Then continue to the docker initialization step.
 ## Docker initialization
 
 ```
-$> git clone
+$> git clone https://github.com/ClubCedille/SiteCedille2.0.git
 $> docker-compose build
 $> docker-compose up
 ```
