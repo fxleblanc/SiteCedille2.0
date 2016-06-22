@@ -29,11 +29,11 @@ class Member(models.Model):
     )
 
     biography = models.TextField(
-        verbose_name=_('Description')
+        verbose_name=_('Biography')
     )
 
     title = models.TextField(
-        verbose_name=_('Speciality')
+        verbose_name=_('Title')
     )
 
     def __str__(self):
