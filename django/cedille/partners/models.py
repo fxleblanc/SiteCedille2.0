@@ -14,7 +14,9 @@ class Partner(models.Model):
     )
 
     logo = models.ImageField(
-        verbose_name=_('logo')
+        verbose_name=_('logo'),
+        null=True,
+        blank=True,
     )
 
     website = models.CharField(
@@ -23,9 +25,12 @@ class Partner(models.Model):
     )
 
     status = models.BooleanField(
-        verbose_name=_('status')
+        verbose_name=_('status'),
+        default=True
     )
 
     ranking = models.CharField(
-        verbose_name=_('ranking')
+        verbose_name=_('ranking'),
+        max_length=1,
+        default="B"
     )
