@@ -29,3 +29,6 @@ class Partner(models.Model):
     ranking = models.CharField(
         verbose_name=_('ranking')
     )
+
+    def __str__(self):
+        return "{}".format(self.partnername)
