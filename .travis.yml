@@ -13,6 +13,7 @@ before_script:
 
 script:
   - coverage run --omit=*.virtualenvs*,*virtualenv* django/cedille/manage.py test member
+  - coverage run --omit=*.virtualenvs*,*virtualenv* django/cedille/manage.py test partners
   - pep8 --count --show-source --exclude=migrations django/cedille
 
 after_success:
