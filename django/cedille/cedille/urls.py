@@ -19,7 +19,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^p/',
-        include('page.urls', namespace="page")),
+        include('page.urls', namespace="page")),
     url(r'^member/',
         include('member.urls', namespace="member")),
     url(r'^partners/',
