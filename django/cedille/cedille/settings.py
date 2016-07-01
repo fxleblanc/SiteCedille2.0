@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'member',
     'partners',
+    'page'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'cedille.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR + '/cedille/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,5 +129,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
+
+STATICFILES_DIRS = (
+    BASE_DIR + '/cedille/static/',
+)
 
 STATIC_URL = '/static/'
