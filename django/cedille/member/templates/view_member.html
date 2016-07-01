@@ -1,0 +1,34 @@
+{% extends 'base_member.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="pusher">
+    <img class="ui fluid image" src="{% static 'assets/images/header-bg.jpg' %}">
+    </img>
+<div class="ui grid">
+
+    <div>
+    </div>
+{% for member in members %}
+
+<div class="ui centered card">
+  <div class="image">
+    <img src="/media/{{member.picture}}">
+  </div>
+  <div class="content">
+    <a class="header">{{ member.firstname }} {{ member.lastname }}</a>
+    <div class="meta">
+      <span class="date"> <i class="user icon"></i>{{ member.title}}</span>
+    </div>
+    <div class="description">
+      {{member.biography}}
+    </div>
+  </div>
+  <div class="extra content">
+  </div>
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
