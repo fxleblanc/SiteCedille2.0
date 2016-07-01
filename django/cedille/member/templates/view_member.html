@@ -1,9 +1,14 @@
 {% extends 'base_member.html' %}
 {% load staticfiles %}
+{% load staticfiles i18n %}
 {% block content %}
+
 <div class="pusher">
-    <img class="ui fluid image" src="{% static 'assets/images/header-bg.jpg' %}">
-    </img>
+
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+    <h1 class="ui left aligned header">{% trans 'Current Member' %}</h1>
 <div class="ui grid">
 
     <div>
@@ -30,6 +35,5 @@
 {% endfor %}
 </div>
 </div>
-</div>
-</div>
+
 {% endblock %}
