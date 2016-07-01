@@ -1,0 +1,39 @@
+{% extends 'base_member.html' %}
+{% load staticfiles %}
+{% load staticfiles i18n %}
+{% block content %}
+
+<div class="pusher">
+
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+    <h1 class="ui left aligned header">{% trans 'Current Member' %}</h1>
+<div class="ui grid">
+
+    <div>
+    </div>
+{% for member in members %}
+<div class="three wide column">
+<div class="ui centered card">
+  <div class="image">
+    <img src="/media/{{member.picture}}">
+  </div>
+  <div class="content">
+    <a class="header">{{ member.firstname }} {{ member.lastname }}</a>
+    <div class="meta">
+      <span class="date"> <i class="user icon"></i>{{ member.title}}</span>
+    </div>
+    <div class="description">
+      {{member.biography}}
+    </div>
+  </div>
+  <div class="extra content">
+  </div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+
+{% endblock %}
