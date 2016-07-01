@@ -36,5 +36,12 @@ class Member(models.Model):
         verbose_name=_('Title')
     )
 
+    picture = models.ImageField(
+            verbose_name=_('picture'),
+            blank=True,
+            null=True,
+            upload_to='avatars/'
+        )
+
     def __str__(self):
         return "{} {}".format(self.firstname, self.lastname)
