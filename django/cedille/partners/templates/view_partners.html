@@ -9,18 +9,69 @@
 <div class="ui hidden divider"></div>
     <h1 class="ui center aligned header">{% trans 'Gold Partners' %}</h1>
 <div class="ui grid">
+    {% for partner in partners %}
+    {% if partner.ranking == "G" %}
+    <div class="ui three wide column centered">
+        <div class="ui centered card">
+            <div class="image">
+                <img src="/media/{{partner.logo}}"></img>
+            </div>
+            <div class="content">
+                <div class="header">{{partner.partnername}}</div>
+                <a href="{{partner.website}}">
+                    <i class="world icon">{{partner.website}}</i>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
 </div>
 <div class="ui hidden divider"></div>
 <div class="ui divider"></div>
 
 <h1 class="ui center aligned header">{% trans 'Silver Partners' %}</h1>
 <div class="ui grid">
+    {% for partner in partners %}
+    {% if partner.ranking == "S" %}
+    <div class="ui three wide column centered">
+        <div class="ui centered card">
+            <div class="image">
+                <img src="/media/{{partner.logo}}"></img>
+            </div>
+            <div class="content">
+                <div class="header">{{partner.partnername}}</div>
+                <a href="{{partner.website}}">
+                    <i class="world icon">{{partner.website}}</i>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
 </div>
 <div class="ui hidden divider"></div>
 <div class="ui divider"></div>
 
 <h1 class="ui center aligned header">{% trans 'Bronze Partners' %}</h1>
 <div class="ui grid">
+    {% for partner in partners %}
+    {% if partner.ranking == "B" %}
+    <div class="ui three wide column centered">
+        <div class="ui centered card">
+            <div class="image">
+                <img src="/media/{{partner.logo}}"></img>
+            </div>
+            <div class="content">
+                <div class="header">{{partner.partnername}}</div>
+                <a href="{{partner.website}}">
+                    <i class="world icon">{{partner.website}}</i>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
 </div>
 <div class="ui hidden divider">
 </div>

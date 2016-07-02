@@ -17,6 +17,7 @@ class Partner(models.Model):
         verbose_name=_('logo'),
         null=True,
         blank=True,
+        upload_to='logo/'
     )
 
     website = models.CharField(
