@@ -10,12 +10,12 @@
         {% block title %} {% trans "club CEDILLE - Free software" %} {% endblock %}
     </title>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.css" rel="stylesheet">
     {% block extrahead %}{% endblock %}
 </head>
 <body>
 
-  <div class="ui huge inverted top fixed menu">
+  <div class="ui massive inverted top fixed menu">
     <div class="ui container">
       <a href="/" class="item">{% trans 'Home' %}</a>
       <div class="ui simple dropdown item">
@@ -27,6 +27,7 @@
         </div>
       </div>
       <a href="{% url 'member:member_list' %}" class="item">{% trans 'Member' %}</a>
+      <a href="{% url 'partners:partner_list' %}" class="item">{% trans 'Partners' %}</a>
     </div>
   </div>
 
@@ -35,6 +36,6 @@
 </body>
 
 <script src="{% static 'jquery/jquery-2.2.2.min.js' %}" type="application/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js" type="application/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.js" type="application/javascript"></script>
 
 {% block extrajs %}{% endblock %}
