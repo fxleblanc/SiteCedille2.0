@@ -18,24 +18,17 @@
   <div class="ui massive inverted top fixed menu">
     <div class="ui container">
       <a href="/" class="item">{% trans 'Home' %}</a>
-      <div class="ui simple dropdown item">
-          {% trans 'Project' %}
-         <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item" href="#">{% trans 'Mirroir' %}</a>
-          <a class="item" href="#">{% trans 'Web Site' %}</a>
-        </div>
-      </div>
+      <a href="{% url 'projects:project_list' %}" class="item">{% trans 'Project' %}</a>
       <a href="{% url 'member:member_list' %}" class="item">{% trans 'Member' %}</a>
       <a href="{% url 'partners:partner_list' %}" class="item">{% trans 'Partners' %}</a>
     </div>
   </div>
 
- {%block content%}{%endblock%}
-
+ {% block content %}{% endblock %}
+ <script src="{% static 'jquery/jquery-2.2.2.min.js' %}" type="application/javascript"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.js" type="application/javascript"></script>
 </body>
 
-<script src="{% static 'jquery/jquery-2.2.2.min.js' %}" type="application/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.js" type="application/javascript"></script>
+
 
 {% block extrajs %}{% endblock %}

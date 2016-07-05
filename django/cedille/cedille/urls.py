@@ -27,6 +27,6 @@ urlpatterns = [
     url(r'^member/', include('member.urls', namespace="member")),
     url(r'^partners/', include('partners.urls', namespace="partners")),
     url(r'^$', home, name='page'),
-    url(r'^project', include('projects.urls', namespace="projects")),
+    url(r'^project/', include('projects.urls', namespace="projects")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

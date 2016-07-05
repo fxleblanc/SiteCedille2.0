@@ -1,1 +1,23 @@
-{% include 'base_projects.html' %}
+{% extends 'base_projects.html' %}
+
+{% load staticfiles %}
+{% load staticfiles i18n %}
+{% block content %}
+
+<div class="pusher">
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+<h1 class="ui centered header">{% trans 'Active Project' %}</h1>
+<div class="ui grid">
+{% for project in projects %}
+<!-- Find something that fits here  -->
+{% endfor %}
+</div>
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+<h1 class="ui centered header">{% trans 'Done Project' %}</h1>
+
+</div>
+{% endblock %}
