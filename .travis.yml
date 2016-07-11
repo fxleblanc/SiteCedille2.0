@@ -12,7 +12,7 @@ before_script:
   - mv django/cedille/cedille/settings_test.py django/cedille/cedille/settings.py
 
 script:
-  - coverage run --omit=*.virtualenvs*,*virtualenv* django/cedille/manage.py test member page partners
+  - coverage run --omit=*.virtualenvs*,*virtualenv* django/cedille/manage.py test member page partners projects
   - pep8 --count --show-source --exclude=migrations django/cedille
 
 after_success:
