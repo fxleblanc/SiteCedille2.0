@@ -18,7 +18,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'member',
-    'partners'
+    'partners',
+    'projects',
 ]
 
 DATABASES = {
