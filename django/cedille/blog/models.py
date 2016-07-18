@@ -10,13 +10,13 @@ class Blog(models.Model):
         verbose_name_plural = _('members')
 
     text = models.TextField(
-        verbose_name=_('Notes')
+        verbose_name=_('Blog')
     )
 
     author = models.ForeignKey(
         User,
         verbose_name=_('Author'),
-        related_name='Notes'
+        related_name='Blog'
         )
 
     date = models.DateField(
