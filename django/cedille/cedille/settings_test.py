@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'member',
     'partners',
     'projects',
+    'blog'
 ]
 
 DATABASES = {
