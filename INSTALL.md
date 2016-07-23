@@ -49,8 +49,8 @@ Ex: *44fcfefb015e*
 
 ```
 docker exec -it [container_id] bash
-python3 manage.py migrate
-python3 manage.py createsuperuser
+python3 django/cedille/manage.py migrate
+python3 django/cedille/manage.py createsuperuser
 ```
 
 ## Connection to application
