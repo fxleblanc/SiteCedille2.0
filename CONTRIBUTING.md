@@ -1,5 +1,14 @@
 # Contributing to cedille website
 
+## Testing
+You need the Docker **container ID** to run the next steps. You can get the container_id by running ```docker ps```.
+Ex: *44fcfefb015e*
+
+```
+docker exec -it [container_id] bash
+python3 django/cedille/manage.py test [project]
+```
+
 
 ## Useful resources
 
